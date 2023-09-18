@@ -43,7 +43,7 @@ public class ItemService {
                         (item.getAvailable() &&
                                 (item.getName().toLowerCase().contains(text.toLowerCase()) ||
                                         item.getDescription().toLowerCase().contains(text.toLowerCase()))
-                        )) // Отбираем доступные вещи, подходящие по тексту
+                        ))
                 .map(ItemMapper::toItemDto)
                 .collect(Collectors.toList());
     }
